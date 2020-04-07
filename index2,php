@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>ATC | Estrella Blanca</title>
+  <!-- CSS  -->
+  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="materialize/css/estilosdiseño.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="materialize/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>  
+
+
+  <script type="text/javascript" src="res/jquery.flexslider-min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="res/flexslider.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <link rel="stylesheet" type="text/css" href="res/remodal.css">
+  <link rel="stylesheet" type="text/css" href="res/remodal-default-theme.css">
+
+
+
+</head>
+<body>
+
+
+  <nav class="light-green darken-4" role="navigation">
+    <div>
+      <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large"><i class="material-icons">menu</i></a>
+    </div>
+    <div class="nav-wrapper container"><a id="logo-container" href="./" class="brand-logo">ATC Estrella Blanca</a>
+      <ul class="right hide-on-med-and-down">
+        <?php if(isset($_SESSION["user_id"])):?>
+          <li><a href="./?view=home">INICIO</a></li>
+          
+          <li><a href="./?action=access&opt=logout">SALIR</a></li>
+        <?php else:?>
+          <li><a href="./">INICIO</a></li>
+          <li><a href="./?view=register">REGISTRO</a></li>
+        <?php endif; ?>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="./">INICIO</a></li>
+        <li><a href="./?view=register">REGISTRO</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">lock</i></a>
+    </div>
+
+  </nav>
+
+
+  
+
+  <?php View::load("index");?>
+
+
+
+
+  <!--  Scripts-->
+
+  <script src="materialize/js/materialize.js"></script>
+
+
+  <script>
+ 
+   
+  </script>
+  <script type="text/javascript" src="core/app/js/main.js"></script>
+
+
+  
+
+</body>
+</html>
